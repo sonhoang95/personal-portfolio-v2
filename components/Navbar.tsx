@@ -3,18 +3,26 @@ import Link from 'next/link';
 import logo from '../public/images/logo.svg';
 import { links } from '../utils/constants';
 import PrimaryButton from './Buttons/PrimaryButton';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { useGlobalContext } from '../context/global_context';
 
 const Navbar = () => {
+  const { isSidebarOpen, openSidebar } = useGlobalContext();
   return (
-    <header className="px-24 py-12 mb-32">
-      <nav className="flex justify-between items-center">
-        <Link href="/">
-          <a>
-            <Image src={logo} alt="logo" />
-          </a>
-        </Link>
-        <div>
-          <ul className="space-x-8 text-sm capitalize font-fira font-thin">
+    <header>
+      <div className="pt-12 px-6 lg:px-24 lg:p-12 mb-32">
+        <nav className="flex justify-between items-center">
+          <Link href="/">
+            <a>
+              <Image src={logo} alt="logo" />
+            </a>
+          </Link>
+          {!isSidebarOpen && (
+            <button className="lg:hidden text-2xl" onClick={openSidebar}>
+              <FaBars />
+            </button>
+          )}
+          <ul className="space-x-8 text-sm capitalize font-fira font-thin hidden lg:block">
             {links.map(link => {
               const { id, title } = link;
               return (
@@ -30,8 +38,8 @@ const Navbar = () => {
               Resume
             </PrimaryButton>
           </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 };

@@ -20,7 +20,7 @@ const Hero = ({ name, cta, title }: HeroProps) => {
         <h1 className="text-[40px] lg:text-7xl font-bold text-gray-400 lg:pb-5 leading-none mb-5">
           {title}
         </h1>
-        <p className="max-w-[540px] text-gray-500 pb-10 lg:text-[20px]">
+        <p className="max-w-[560px] text-gray-500 pb-10 text-[18px]">
           I'm a front-end developer specializing in building (and occasionally
           designing) exceptional digital experiences. Currently, I'm focused on
           building accessible, human-centered products at{' '}

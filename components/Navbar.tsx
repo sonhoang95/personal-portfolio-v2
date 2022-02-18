@@ -10,7 +10,7 @@ const Navbar = () => {
   const { isSidebarOpen, openSidebar } = useGlobalContext();
   return (
     <header>
-      <div className="pt-12 px-6 lg:px-24 lg:p-12 mb-32">
+      <div className="px-6 lg:px-12 lg:p-12 mb-32">
         <nav className="flex justify-between items-center">
           <Link href="/">
             <a>

@@ -14,13 +14,13 @@ const Hero = ({ title, name, desc, btnText }: HeroProps) => {
         <p className="font-fira tracking-wider text-teal-300 lg:pb-1">
           Hi, my name is
         </p>
-        <h1 className="text-[40px] lg:text-7xl font-bold text-gray-100 leading-tight mb-3">
+        <h1 className="text-[40px] lg:text-7xl font-bold text-[#ccd6f6] leading-tight mb-3">
           {name}
         </h1>
-        <h1 className="text-[40px] lg:text-7xl font-bold text-gray-400 lg:pb-5 leading-none mb-5">
+        <h1 className="text-[40px] lg:text-7xl font-bold text-[#8892b0] lg:pb-5 leading-none mb-5">
           {title}
         </h1>
-        <p className="max-w-[560px] text-gray-500 pb-10 text-[18px]">{desc}</p>
+        <p className="max-w-[580px] text-[#8892b0] pb-10 text-[18px]">{desc}</p>
 
         <PrimaryButton url="#projects">{btnText}</PrimaryButton>
       </div>

@@ -27,7 +27,7 @@ const Navbar = () => {
               const { id, title } = link;
               return (
                 <Link href={`/${title}`} key={id}>
-                  <a>
+                  <a className="text-[#8892b0]">
                     <span className="mr-2 text-teal-400">{`0${id}.`}</span>
                     {title}
                   </a>

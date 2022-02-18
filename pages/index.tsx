@@ -2,8 +2,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { About, Hero } from '../components';
-import { createClient } from 'contentful';
-import { homeData } from '../utils/constants';
+import { aboutData, homeData } from '../utils/constants';
 
 // const client = createClient({
 //   space: process.env.CONTENTFUL_SPACE_ID || '',
@@ -19,7 +18,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero {...homeData} />
-      <About />
+      <About {...aboutData} />
     </div>
   );
 };

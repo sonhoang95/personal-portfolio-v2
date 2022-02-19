@@ -1,16 +1,40 @@
 /* eslint-disable react/no-unescaped-entities */
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import { About, Hero } from '../components';
 import Contact from '../components/Contact';
+import Jobs from '../components/Jobs';
 import { aboutData, homeData } from '../utils/constants';
+
+const url = 'https://course-api.com/react-tabs-project';
 
 // const client = createClient({
 //   space: process.env.CONTENTFUL_SPACE_ID || '',
 //   accessToken: process.env.CONTENTFUL_ACCESS_KEY || '',
 // });
 
-const Home: NextPage = () => {
+export interface Job {
+  id: string;
+  order: number;
+  title: string;
+  dates: string;
+  duties: string[];
+  company: string;
+}
+
+export interface GetJobResults {
+  results: Job[];
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const res = await fetch(url);
+  const jobs: GetJobResults = await res.json();
+
+  return {
+    props: { jobs },
+  };
+};
+const Home: NextPage<{ jobs: Job[] }> = ({ jobs }) => {
   return (
     <div>
       <Head>
@@ -20,6 +44,7 @@ const Home: NextPage = () => {
       </Head>
       <Hero {...homeData} />
       <About {...aboutData} />
+      <Jobs jobs={jobs} />
       <Contact />
     </div>
   );

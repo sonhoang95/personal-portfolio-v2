@@ -13,7 +13,7 @@ const About = ({ description, languages }: AboutProps) => {
   return (
     <section
       id="about"
-      className="pb-64 px-6 md:px-12 lg:px-0 max-w-[900px] mx-auto"
+      className="pb-32 px-6 md:px-12 lg:px-0 max-w-[900px] mx-auto"
     >
       <SectionTitle title="About me" index={1} />
       <div className="grid lg:grid-cols-[auto_300px] gap-10">

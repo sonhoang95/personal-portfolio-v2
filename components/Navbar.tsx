@@ -50,12 +50,12 @@ const Navbar = () => {
               <AiOutlineAlignRight />
             </button>
           )}
-          <ul className="space-x-8 text-sm capitalize font-fira font-thin hidden lg:block">
+          <ul className="space-x-8 text-sm font-fira font-thin hidden lg:block">
             {links.map(link => {
               const { id, title } = link;
               return (
                 <Link href={`/#${title}`} key={id}>
-                  <a className="text-[#8892b0]">
+                  <a className="text-[#8892b0] capitalize">
                     <span className="mr-2 text-teal-300">{`0${id}.`}</span>
                     {title}
                   </a>

@@ -10,19 +10,19 @@ import {
 export const links = [
   {
     id: 1,
-    title: 'About',
+    title: 'about',
   },
   {
     id: 2,
-    title: 'Experience',
+    title: 'experience',
   },
   {
     id: 3,
-    title: 'Work',
+    title: 'work',
   },
   {
     id: 4,
-    title: 'Contact',
+    title: 'contact',
   },
 ];
 

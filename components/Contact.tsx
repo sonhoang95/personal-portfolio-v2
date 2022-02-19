@@ -4,7 +4,10 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <section className="max-w-[600px] mx-auto text-center text-slate py-24 tracking-wide mb-12 px-6 lg:px-0">
+    <section
+      id="contact"
+      className="max-w-[600px] mx-auto text-center text-slate py-24 tracking-wide mb-12 px-6 lg:px-0"
+    >
       <p className="text-teal-300 font-fira font-thin capitalize mb-3">
         04. What's next?
       </p>
@@ -17,7 +20,7 @@ const Contact = () => {
         try my best to get back to you!
       </p>
       <Link href="/">
-        <a className="inline-block px-8 py-4 mt-12 rounded border border-teal-300 text-teal-300 capitalize font-fira text-sm">
+        <a className="inline-block px-8 py-4 mt-12 rounded border border-teal-300 text-teal-300 capitalize font-fira text-sm duration-300 ease-in-out hover:bg-teal-800 hover:text-teal-50">
           Say hello
         </a>
       </Link>

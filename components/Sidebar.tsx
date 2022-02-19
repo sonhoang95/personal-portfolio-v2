@@ -10,7 +10,7 @@ const Sidebar = () => {
 
   return (
     <aside
-      className={`lg:hidden fixed h-screen bg-gray-800 w-3/4 top-0 right-0 transform transition-transform duration-300 ease-in-out z-20 ${
+      className={`lg:hidden fixed h-screen bg-gray-800 w-3/4 top-0 right-0 transform transition-transform duration-300 ease-in-out z-50 ${
         isSidebarOpen ? 'translate-x-0' : 'translate-x-full'
       }`}
     >

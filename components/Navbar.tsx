@@ -9,7 +9,7 @@ import { useCallback, useEffect, useState } from 'react';
 
 const Navbar = () => {
   const { isSidebarOpen, openSidebar } = useGlobalContext();
-  const [isScroll, setIsScroll] = useState(false);
+  const [isScroll, setIsScroll] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = useCallback(() => {

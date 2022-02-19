@@ -1,22 +1,55 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Fragment } from 'react';
+import {
+  AiOutlineTwitter,
+  AiOutlineGithub,
+  AiOutlineCodepen,
+  AiFillLinkedin,
+} from 'react-icons/ai';
 
 export const links = [
   {
     id: 1,
-    title: 'about',
+    title: 'About',
   },
   {
     id: 2,
-    title: 'experience',
+    title: 'Experience',
   },
   {
     id: 3,
-    title: 'work',
+    title: 'Work',
   },
   {
     id: 4,
-    title: 'contact',
+    title: 'Contact',
+  },
+];
+
+export const socials = [
+  {
+    id: 1,
+    icon: <AiOutlineGithub />,
+    href: 'https://github.com/sonhoang95',
+    title: 'Github',
+  },
+  {
+    id: 2,
+    icon: <AiOutlineTwitter />,
+    href: 'https://twitter.com/web_smasher',
+    title: 'Twitter',
+  },
+  {
+    id: 3,
+    icon: <AiFillLinkedin />,
+    href: 'https://www.linkedin.com/in/son-nguyen-6a0b4b157/',
+    title: 'Linkedin',
+  },
+  {
+    id: 4,
+    icon: <AiOutlineCodepen />,
+    href: 'https://codepen.io/sonhoang95',
+    title: 'Codepen',
   },
 ];
 

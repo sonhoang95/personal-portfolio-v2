@@ -14,7 +14,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en" className="scroll-smooth">
         <Head>
           <link
             href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap"

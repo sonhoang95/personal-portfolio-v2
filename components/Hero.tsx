@@ -9,7 +9,7 @@ export interface HeroProps {
 
 const Hero = ({ title, name, desc, btnText }: HeroProps) => {
   return (
-    <section className="px-6 lg:px-0">
+    <section className="px-6 lg:px-0 min-h-screen flex flex-col justify-center items-center">
       <div className="container max-w-[1000px] mx-auto lg:space-y-4">
         <p className="font-fira tracking-wider text-teal-300 lg:pb-1">
           Hi, my name is

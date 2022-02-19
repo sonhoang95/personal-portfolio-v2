@@ -11,9 +11,12 @@ export interface AboutProps {
 }
 const About = ({ description, languages }: AboutProps) => {
   return (
-    <section className="py-52 max-w-[900px] mx-auto">
+    <section
+      id="about"
+      className="pb-64 px-6 md:px-12 lg:px-0 max-w-[900px] mx-auto"
+    >
       <SectionTitle title="About me" index={1} />
-      <div className="grid grid-cols-[auto_300px] gap-10">
+      <div className="grid lg:grid-cols-[auto_300px] gap-10">
         <div className="text-[#8892b0] space-y-6">
           {description}
           <div className="grid grid-cols-2 font-fira text-sm space-y-2 font-thin">
@@ -29,7 +32,7 @@ const About = ({ description, languages }: AboutProps) => {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative max-w-[300px]">
           <Image
             src={selfPortrait}
             alt="self-portrait"

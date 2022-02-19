@@ -9,6 +9,9 @@ module.exports = {
       fontFamily: {
         fira: "'Fira Code', monospace",
       },
+      colors: {
+        slate: '#8892b0',
+      },
     },
   },
   plugins: [],

@@ -31,8 +31,8 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed w-full h-[100px] top-0 transform transition-transform duration-200 ease-in-out ${
-        !isScroll ? '-translate-y-full' : 'shadow-lg backdrop-blur-md'
+      className={`fixed w-full h-[100px] top-0 transform transition-transform duration-200 ease-in-out z-30 ${
+        !isScroll ? '-translate-y-full' : 'backdrop-blur-md'
       }`}
     >
       <div className="px-6 lg:px-12 mb-32 flex flex-col justify-center h-[100px]">
@@ -44,7 +44,7 @@ const Navbar = () => {
           </Link>
           {!isSidebarOpen && (
             <button
-              className="lg:hidden text-3xl text-teal-400"
+              className="lg:hidden text-3xl text-teal-300"
               onClick={openSidebar}
             >
               <AiOutlineAlignRight />
@@ -56,7 +56,7 @@ const Navbar = () => {
               return (
                 <Link href={`/#${title}`} key={id}>
                   <a className="text-[#8892b0]">
-                    <span className="mr-2 text-teal-400">{`0${id}.`}</span>
+                    <span className="mr-2 text-teal-300">{`0${id}.`}</span>
                     {title}
                   </a>
                 </Link>

@@ -23,7 +23,7 @@ const About = ({ description, languages }: AboutProps) => {
             {languages.map((language, index) => (
               <p key={index} className="flex items-center gap-2">
                 {' '}
-                <span className="text-[10px] text-teal-400">
+                <span className="text-[10px] text-teal-300">
                   <BiRightArrow />
                 </span>
                 {language}
@@ -32,13 +32,13 @@ const About = ({ description, languages }: AboutProps) => {
           </div>
         </div>
 
-        <div className="relative max-w-[300px]">
+        <div className="relative max-w-[250px] lg:max-w-[300px]">
           <Image
             src={selfPortrait}
             alt="self-portrait"
             className="z-10 rounded-lg"
           />
-          <div className="absolute top-0 left-0 w-full h-[300px] border-2 border-teal-400 z-0 transform translate-x-5 translate-y-5 rounded-lg"></div>
+          <div className="absolute top-0 left-0 w-full h-[250px] lg:h-[300px] border-2 border-teal-400 z-0 transform translate-x-5 translate-y-5 rounded-lg"></div>
         </div>
       </div>
     </section>

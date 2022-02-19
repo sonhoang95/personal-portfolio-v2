@@ -15,7 +15,7 @@ const Sidebar = () => {
       }`}
     >
       <button
-        className="absolute top-[52px] right-[24px] text-3xl text-teal-400"
+        className="absolute top-[52px] right-[24px] text-3xl text-teal-300"
         onClick={closeSidebar}
       >
         <AiOutlineClose />
@@ -26,7 +26,7 @@ const Sidebar = () => {
           return (
             <Link href={`/#${title}`} key={id}>
               <a className="flex flex-col items-center" onClick={closeSidebar}>
-                <span className="mr-2 text-teal-400">{`0${id}.`}</span>
+                <span className="mr-2 text-teal-300">{`0${id}.`}</span>
                 {title}
               </a>
             </Link>

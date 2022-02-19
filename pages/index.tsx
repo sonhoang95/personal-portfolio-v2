@@ -2,6 +2,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { About, Hero } from '../components';
+import Contact from '../components/Contact';
 import { aboutData, homeData } from '../utils/constants';
 
 // const client = createClient({
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
       </Head>
       <Hero {...homeData} />
       <About {...aboutData} />
+      <Contact />
     </div>
   );
 };

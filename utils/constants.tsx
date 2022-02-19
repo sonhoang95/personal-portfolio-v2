@@ -62,7 +62,7 @@ export const homeData = {
       I'm a front-end developer specializing in building (and occasionally
       designing) exceptional digital experiences. Currently, I'm focused on
       building accessible, human-centered products at{' '}
-      <a href="https://www.curo.com/" className="text-teal-400 hover:underline">
+      <a href="https://www.curo.com/" className="text-teal-300 hover:underline">
         Curo Financial Group.
       </a>
     </Fragment>
@@ -83,12 +83,12 @@ export const aboutData = {
       </p>
       <p>
         Fast-forward to today, and I've had the privilege of working at an{' '}
-        <span className="text-teal-400">advertising agency</span> ,{' '}
-        <span className="text-teal-400"> a start-up</span>, and{' '}
-        <span className="text-teal-400">a corporation</span>. My main focus
+        <span className="text-teal-300">advertising agency</span> ,{' '}
+        <span className="text-teal-300"> a start-up</span>, and{' '}
+        <span className="text-teal-300">a corporation</span>. My main focus
         these days is building accessible, inclusive products and digital
         experiences at{' '}
-        <a href="https://www.curo.com/" className="text-teal-400">
+        <a href="https://www.curo.com/" className="text-teal-300">
           Curo Financial Group
         </a>{' '}
         for a variety of clients.
@@ -103,7 +103,7 @@ export const aboutData = {
   languages: [
     'JavaScript (ES6+)',
     'React',
-    'CMS',
+    'Headless CMSs',
     'TypeScript',
     'TailwindCSS',
     'Gatsby.js',

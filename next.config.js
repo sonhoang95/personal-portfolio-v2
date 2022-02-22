@@ -2,8 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    CONTENTFUL_SPACE_ID: 'bnblm35i35tv',
-    CONTENTFUL_ACCESS_KEY: 'tVjAMpQnaFOsgUS3vd0PJPpt1WQ_OlvKMCm0Ge5qBEc',
+    CONTENTFUL_SPACE_ID: 'prik3ds8tbo9',
+    CONTENTFUL_ACCESS_KEY: 'CvbixxyBg1MNPozWW3ToZvhue_k05f31yfppDEgBH94',
+  },
+  images: {
+    domains: ['images.ctfassets.net'],
   },
 };
 

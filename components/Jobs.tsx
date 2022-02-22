@@ -1,9 +1,21 @@
 import React, { useState } from 'react';
 import { BiRightArrow } from 'react-icons/bi';
-import { Job } from '../pages';
 import SectionTitle from './SectionTitle';
 
-const Jobs = ({ jobs }: { jobs: Job[] }) => {
+export interface Job {
+  id: string;
+  order: number;
+  title: string;
+  dates: string;
+  duties: string[];
+  company: string;
+}
+
+export interface JobsProps {
+  jobs: Job[];
+}
+
+const Jobs = ({ jobs }: JobsProps) => {
   const [value, setValue] = useState(0);
 
   const { title, dates, duties, company } = jobs[value];
@@ -12,7 +24,7 @@ const Jobs = ({ jobs }: { jobs: Job[] }) => {
   return (
     <section
       id="experience"
-      className="max-w-[700px] mx-auto py-24 px-6 lg:px-0"
+      className="max-w-[700px] mx-auto pt-24 pb-32 px-6 lg:px-0"
     >
       <SectionTitle title="Where I've worked" index={2} />
       <div className="flex flex-col lg:flex-row px-6 lg:px-0 justify-between gap-8">

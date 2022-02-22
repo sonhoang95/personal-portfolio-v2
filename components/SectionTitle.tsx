@@ -7,8 +7,8 @@ export interface SectionTitleProps {
 const SectionTitle = ({ title, index }: SectionTitleProps) => {
   return (
     <div
-      className={`grid grid-cols-[auto_1fr] gap-6 lg:gap-0 ${
-        index === 2
+      className={`grid grid-cols-[auto_1fr] ${
+        index === 2 || index === 3
           ? 'lg:grid-cols-[300px_300px]'
           : 'lg:grid-cols-[185px_300px]'
       } items-center mb-8`}
@@ -19,7 +19,9 @@ const SectionTitle = ({ title, index }: SectionTitleProps) => {
         </span>
         {title}
       </h1>
-      <div className="h-[1px] w-full bg-gray-700"></div>
+      <div
+        className={`h-[1px] w-full bg-gray-700 ${index === 3 && 'ml-5'}`}
+      ></div>
     </div>
   );
 };

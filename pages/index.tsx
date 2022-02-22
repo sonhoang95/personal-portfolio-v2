@@ -1,40 +1,33 @@
 /* eslint-disable react/no-unescaped-entities */
+import { createClient } from 'contentful';
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import { About, Hero } from '../components';
 import Contact from '../components/Contact';
+import FeaturedProjects from '../components/FeaturedProjects';
 import Jobs from '../components/Jobs';
-import { aboutData, homeData } from '../utils/constants';
+import { Project } from '../types';
+import { aboutData, homeData, jobsData } from '../utils/constants';
 
-const url = 'https://course-api.com/react-tabs-project';
-
-// const client = createClient({
-//   space: process.env.CONTENTFUL_SPACE_ID || '',
-//   accessToken: process.env.CONTENTFUL_ACCESS_KEY || '',
-// });
-
-export interface Job {
-  id: string;
-  order: number;
-  title: string;
-  dates: string;
-  duties: string[];
-  company: string;
-}
-
-export interface GetJobResults {
-  results: Job[];
-}
+const client = createClient({
+  space: process.env.CONTENTFUL_SPACE_ID || 'prik3ds8tbo9',
+  accessToken:
+    process.env.CONTENTFUL_ACCESS_KEY ||
+    'CvbixxyBg1MNPozWW3ToZvhue_k05f31yfppDEgBH94',
+});
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(url);
-  const jobs: GetJobResults = await res.json();
+  const res = await client.getEntries({ content_type: 'project' });
+  const projects = res.items.map(item => item.fields);
 
   return {
-    props: { jobs },
+    props: { projects },
   };
 };
-const Home: NextPage<{ jobs: Job[] }> = ({ jobs }) => {
+
+const Home: NextPage<{ projects: Project[] }> = ({ projects }) => {
+  console.log(projects);
+
   return (
     <div>
       <Head>
@@ -44,7 +37,8 @@ const Home: NextPage<{ jobs: Job[] }> = ({ jobs }) => {
       </Head>
       <Hero {...homeData} />
       <About {...aboutData} />
-      <Jobs jobs={jobs} />
+      <Jobs jobs={jobsData} />
+      <FeaturedProjects projects={projects} />
       <Contact />
     </div>
   );

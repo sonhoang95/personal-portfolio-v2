@@ -21,7 +21,7 @@ const FeaturedProjects = ({ projects }: { projects: Project[] }) => {
             key={index}
             className="grid lg:grid-cols-2 lg:gap-12 items-center bg-[#112240] lg:bg-transparent"
           >
-            <div className="lg:w-[570px]">
+            <div className="lg:w-[570px] relative">
               <Image
                 src={`https:${pathToImg}`}
                 alt={name}

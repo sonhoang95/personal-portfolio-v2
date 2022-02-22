@@ -15,7 +15,7 @@ const Sidebar = () => {
       }`}
     >
       <button
-        className="absolute top-[52px] right-[24px] text-3xl text-teal-300"
+        className="absolute top-[36px] right-[20px] text-3xl text-teal-300"
         onClick={closeSidebar}
       >
         <AiOutlineClose />

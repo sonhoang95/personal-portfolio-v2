@@ -22,7 +22,7 @@ const Hero = ({ title, name, desc, btnText }: HeroProps) => {
         </h1>
         <p className="max-w-[580px] text-[#8892b0] pb-10 text-[18px]">{desc}</p>
 
-        <PrimaryButton url="#projects">{btnText}</PrimaryButton>
+        <PrimaryButton url="#work">{btnText}</PrimaryButton>
       </div>
     </section>
   );

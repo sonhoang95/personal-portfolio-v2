@@ -4,9 +4,9 @@ import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import { About, Hero } from '../components';
 import Contact from '../components/Contact';
-import FeaturedProjects from '../components/FeaturedProjects';
+import Projects from '../components/Projects';
 import Jobs from '../components/Jobs';
-import { Project } from '../types';
+import { ProjectData } from '../types';
 import { aboutData, homeData, jobsData } from '../utils/constants';
 
 const client = createClient({
@@ -25,9 +25,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const Home: NextPage<{ projects: Project[] }> = ({ projects }) => {
-  console.log(projects);
-
+const Home: NextPage<{ projects: ProjectData[] }> = ({ projects }) => {
   return (
     <div>
       <Head>
@@ -38,7 +36,7 @@ const Home: NextPage<{ projects: Project[] }> = ({ projects }) => {
       <Hero {...homeData} />
       <About {...aboutData} />
       <Jobs jobs={jobsData} />
-      <FeaturedProjects projects={projects} />
+      <Projects projects={projects} />
       <Contact />
     </div>
   );

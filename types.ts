@@ -1,5 +1,6 @@
-export interface Project {
+export interface ProjectData {
   name: string;
+  url: string;
   shortDesc: string;
   longDesc: LongDesc;
   thumbnail: Thumbnail;

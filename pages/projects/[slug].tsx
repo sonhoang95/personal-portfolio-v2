@@ -1,6 +1,5 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { ProjectData } from '../../types';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { client } from '../index';
 import Image from 'next/image';
 import TechStack from '../../components/TechStack';
@@ -41,7 +40,12 @@ const ProjectDetail: NextPage<{ project: ProjectData }> = ({ project }) => {
         </div>
         <div className="grid lg:grid-cols-2 gap-10">
           <div className="long-desc space-y-6">
-            {documentToReactComponents(longDesc)}
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Blanditiis excepturi magni consequuntur minima. Est quaerat
+              maiores sequi dolore, tenetur tempora facilis inventore eligendi
+              aspernatur neque! Quae inventore sit dolor assumenda.
+            </p>
           </div>
           <div className="space-y-6">
             <Image

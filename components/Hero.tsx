@@ -1,5 +1,4 @@
 import PrimaryButton from './Buttons/PrimaryButton';
-
 export interface HeroProps {
   title: string;
   name: string;

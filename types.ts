@@ -1,6 +1,7 @@
 export interface ProjectData {
   name: string;
-  url: string;
+  githubUrl: string;
+  siteUrl: string;
   shortDesc: string;
   longDesc: LongDesc;
   thumbnail: Thumbnail;

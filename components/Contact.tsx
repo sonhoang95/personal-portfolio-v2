@@ -1,12 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
+import { motion } from 'framer-motion';
 import Link from 'next/link';
-import React from 'react';
 
 const Contact = () => {
   return (
-    <section
+    <motion.section
       id="contact"
       className="max-w-[600px] mx-auto text-center text-slate py-24 tracking-wide mb-12 px-6 lg:px-0"
+      initial={{ opacity: 0, y: 150 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1.5 }}
     >
       <p className="text-teal-300 font-fira font-thin capitalize mb-3">
         04. What's next?
@@ -24,7 +28,7 @@ const Contact = () => {
           Say hello
         </a>
       </Link>
-    </section>
+    </motion.section>
   );
 };
 

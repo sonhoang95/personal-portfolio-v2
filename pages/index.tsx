@@ -9,11 +9,9 @@ import Jobs from '../components/Jobs';
 import { ProjectData } from '../types';
 import { aboutData, homeData, jobsData } from '../utils/constants';
 
-const client = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID || 'prik3ds8tbo9',
-  accessToken:
-    process.env.CONTENTFUL_ACCESS_KEY ||
-    'CvbixxyBg1MNPozWW3ToZvhue_k05f31yfppDEgBH94',
+export const client = createClient({
+  space: process.env.CONTENTFUL_SPACE_ID || '',
+  accessToken: process.env.CONTENTFUL_ACCESS_KEY || '',
 });
 
 export const getStaticProps: GetStaticProps = async () => {

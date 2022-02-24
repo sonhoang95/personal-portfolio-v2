@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { BiRightArrow } from 'react-icons/bi';
 import SectionTitle from './SectionTitle';
@@ -22,9 +23,13 @@ const Jobs = ({ jobs }: JobsProps) => {
   const companies = jobs.map(job => job.company);
 
   return (
-    <section
+    <motion.section
       id="experience"
       className="max-w-[700px] mx-auto pt-24 pb-32 px-6 lg:px-0"
+      initial={{ opacity: 0, y: 300 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1.5 }}
     >
       <SectionTitle title="Where I've worked" index={2} />
       <div className="flex flex-col lg:flex-row px-6 lg:px-0 justify-between gap-8">
@@ -62,7 +67,7 @@ const Jobs = ({ jobs }: JobsProps) => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -29,7 +29,7 @@ const Jobs = ({ jobs }: JobsProps) => {
       initial={{ opacity: 0, y: 300 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 1 }}
     >
       <SectionTitle title="Where I've worked" index={2} />
       <div className="flex flex-col lg:flex-row px-6 lg:px-0 justify-between gap-8">

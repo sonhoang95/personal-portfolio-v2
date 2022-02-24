@@ -10,7 +10,7 @@ const Contact = () => {
       initial={{ opacity: 0, y: 150 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 1 }}
     >
       <p className="text-teal-300 font-fira font-thin capitalize mb-3">
         04. What's next?

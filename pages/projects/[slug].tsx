@@ -39,14 +39,7 @@ const ProjectDetail: NextPage<{ project: ProjectData }> = ({ project }) => {
           <TechStack techStack={techStack} />
         </div>
         <div className="grid lg:grid-cols-2 gap-10">
-          <div className="long-desc space-y-6">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis excepturi magni consequuntur minima. Est quaerat
-              maiores sequi dolore, tenetur tempora facilis inventore eligendi
-              aspernatur neque! Quae inventore sit dolor assumenda.
-            </p>
-          </div>
+          <div className="long-desc space-y-6">{longDesc}</div>
           <div className="space-y-6">
             <Image
               src={`https:${pathToThumbnail}`}

@@ -6,6 +6,24 @@ import PrimaryButton from './Buttons/PrimaryButton';
 import { AiOutlineAlignRight } from 'react-icons/ai';
 import { useGlobalContext } from '../context/global_context';
 import { useCallback, useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+
+const container = {
+  hidden: { scale: 0 },
+  show: {
+    scale: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.3,
+      staggerDirection: 1,
+    },
+  },
+};
+
+const item = {
+  hidden: { scale: 0 },
+  show: { scale: 1 },
+};
 
 const Navbar = () => {
   const { isSidebarOpen, openSidebar } = useGlobalContext();
@@ -36,12 +54,19 @@ const Navbar = () => {
       }`}
     >
       <div className="px-6 lg:px-12 mb-32 flex flex-col justify-center h-[100px]">
-        <nav className="flex justify-between items-center">
-          <Link href="/">
-            <a>
-              <Image src={logo} alt="logo" />
-            </a>
-          </Link>
+        <motion.nav
+          className="flex justify-between items-center"
+          variants={container}
+          initial="hidden"
+          animate="show"
+        >
+          <motion.div variants={item}>
+            <Link href="/">
+              <a>
+                <Image src={logo} alt="logo" />
+              </a>
+            </Link>
+          </motion.div>
           {!isSidebarOpen && (
             <button
               className="lg:hidden text-3xl text-teal-300"
@@ -50,23 +75,27 @@ const Navbar = () => {
               <AiOutlineAlignRight />
             </button>
           )}
-          <ul className="space-x-8 text-sm font-fira font-thin hidden lg:block">
+          <ul className="space-x-8 text-sm font-fira font-thin hidden lg:flex items-center">
             {links.map(link => {
               const { id, title } = link;
               return (
-                <Link href={`/#${title}`} key={id}>
-                  <a className="text-[#8892b0] capitalize">
-                    <span className="mr-2 text-teal-300">{`0${id}.`}</span>
-                    {title}
-                  </a>
-                </Link>
+                <motion.li key={id} variants={item}>
+                  <Link href={`/#${title}`}>
+                    <a className="text-[#8892b0] capitalize">
+                      <span className="mr-2 text-teal-300">{`0${id}.`}</span>
+                      {title}
+                    </a>
+                  </Link>
+                </motion.li>
               );
             })}
-            <PrimaryButton url="/" small={true}>
-              Resume
-            </PrimaryButton>
+            <motion.div variants={item}>
+              <PrimaryButton url="/" small={true}>
+                Resume
+              </PrimaryButton>
+            </motion.div>
           </ul>
-        </nav>
+        </motion.nav>
       </div>
     </header>
   );

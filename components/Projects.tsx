@@ -11,7 +11,7 @@ const Projects = ({ projects }: { projects: ProjectData[] }) => {
       initial={{ opacity: 0, y: 300 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 1 }}
     >
       <SectionTitle index={3} title="Something I've built" />
       {projects.map((project, index) => (

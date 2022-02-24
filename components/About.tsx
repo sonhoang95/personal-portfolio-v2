@@ -17,7 +17,7 @@ const About = ({ description, languages }: AboutProps) => {
       initial={{ opacity: 0, y: 300 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 1 }}
     >
       <SectionTitle title="About me" index={1} />
       <motion.div className="grid lg:grid-cols-[auto_300px] gap-10">

@@ -3,7 +3,7 @@ export interface ProjectData {
   githubUrl: string;
   siteUrl: string;
   shortDesc: string;
-  longDesc: LongDesc;
+  longDesc: string;
   thumbnail: Thumbnail;
   images: ImageElement[];
   slug: string;
@@ -63,12 +63,6 @@ export interface EnvironmentSys {
   id: string;
   type: string;
   linkType: string;
-}
-
-export interface LongDesc {
-  data: Data;
-  content: LongDescContent[];
-  nodeType: string;
 }
 
 export interface LongDescContent {

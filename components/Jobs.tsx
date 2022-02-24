@@ -26,7 +26,7 @@ const Jobs = ({ jobs }: JobsProps) => {
     <motion.section
       id="experience"
       className="max-w-[700px] mx-auto pt-24 pb-32 px-6 lg:px-0"
-      initial={{ opacity: 0, y: 300 }}
+      initial={{ opacity: 0, y: 150 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}

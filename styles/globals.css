@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+.long-desc {
+  font-size: 1.125rem;
+}
+
 .long-desc h3 {
   font-size: 1.3rem;
+}
+
+.long-desc h4 {
+  font-size: 1.3rem;
+  color: #ccd6f6;
+  font-weight: 700;
+}
+
+.long-desc p {
+  line-height: 2;
+}
+
+.long-desc ul {
+  list-style: circle;
+}
+
+.long-desc li {
+  margin-left: 2rem;
+  padding: 0.5rem 0;
 }

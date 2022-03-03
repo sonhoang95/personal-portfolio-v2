@@ -3,6 +3,8 @@ import { ProjectData } from '../../types';
 import { client } from '../index';
 import Image from 'next/image';
 import TechStack from '../../components/TechStack';
+import PrimaryButton from '../../components/Buttons/PrimaryButton';
+import ReactMarkdown from 'react-markdown';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const res = await client.getEntries<any>({ content_type: 'project' });
@@ -26,7 +28,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 const ProjectDetail: NextPage<{ project: ProjectData }> = ({ project }) => {
-  const { name, techStack, longDesc, thumbnail, images } = project;
+  const { name, techStack, longDesc, thumbnail, images, siteUrl } = project;
   const pathToThumbnail = thumbnail.fields.file.url;
   const thumbnailWidth = thumbnail.fields.file.details.image.width;
   const thumbnailHeight = thumbnail.fields.file.details.image.height;
@@ -34,19 +36,17 @@ const ProjectDetail: NextPage<{ project: ProjectData }> = ({ project }) => {
   return (
     <section className="px-6 lg:px-0 min-h-screen flex flex-col justify-center items-center">
       <div className="container max-w-[1200px] mx-auto lg:space-y-4 my-48">
-        <div>
-          <h2 className="text-3xl font-bold text-[#ccd6f6] mb-6">{name}</h2>
-          <TechStack techStack={techStack} />
+        <div className="mb-8 flex justify-between items-center">
+          <h2 className="text-5xl font-bold text-[#ccd6f6] mb-8">{name}</h2>
+          <TechStack techStack={techStack} isProjectDetails={true} />
         </div>
-        <div className="grid lg:grid-cols-2 gap-10">
-          <div className="long-desc space-y-6">{longDesc}</div>
+        <div className="grid lg:grid-cols-2 gap-10 text-slate">
+          <div className="long-desc space-y-6">
+            <ReactMarkdown>{longDesc}</ReactMarkdown>
+            <PrimaryButton url={siteUrl}>Web Demo</PrimaryButton>
+          </div>
+
           <div className="space-y-6">
-            <Image
-              src={`https:${pathToThumbnail}`}
-              alt={name}
-              width={thumbnailWidth}
-              height={thumbnailHeight}
-            />
             <div className="flex flex-col gap-8">
               {images.map((image, index) => (
                 <Image

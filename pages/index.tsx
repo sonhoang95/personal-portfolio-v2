@@ -8,6 +8,7 @@ import Projects from '../components/Projects';
 import Jobs from '../components/Jobs';
 import { ProjectData } from '../types';
 import { aboutData, homeData, jobsData } from '../utils/constants';
+import OtherProjects from '../components/OtherProjects';
 
 export const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID || '',
@@ -35,6 +36,7 @@ const Home: NextPage<{ projects: ProjectData[] }> = ({ projects }) => {
       <About {...aboutData} />
       <Jobs jobs={jobsData} />
       <Projects projects={projects} />
+      <OtherProjects projects={projects} />
       <Contact />
     </div>
   );

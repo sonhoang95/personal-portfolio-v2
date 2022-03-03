@@ -5,7 +5,7 @@ import { FiGithub, FiShare } from 'react-icons/fi';
 import Link from 'next/link';
 import TechStack from './TechStack';
 
-const Project = ({
+const FeaturedProject = ({
   name,
   shortDesc,
   featured,
@@ -58,4 +58,4 @@ const Project = ({
   );
 };
 
-export default Project;
+export default FeaturedProject;

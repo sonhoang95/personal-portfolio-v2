@@ -11,7 +11,7 @@ const OtherProject = ({
   githubUrl,
 }: ProjectData) => {
   return (
-    <article className="bg-[#112240] px-7 py-8 flex flex-col justify-between transform transition duration-200 ease-in-out hover:-translate-y-2">
+    <article className="bg-[#112240] px-7 py-8 flex flex-col justify-between transform transition duration-200 ease-in-out hover:-translate-y-2 project">
       <div>
         <div className="flex items-center justify-between mb-8">
           <span className="text-5xl text-teal-300">

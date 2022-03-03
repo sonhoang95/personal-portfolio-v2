@@ -28,3 +28,11 @@
   margin-left: 2rem;
   padding: 0.5rem 0;
 }
+
+.project h3 {
+  transition: color 0.2s ease-in;
+}
+
+.project:hover h3 {
+  color: #5eead3;
+}

@@ -28,10 +28,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 const ProjectDetail: NextPage<{ project: ProjectData }> = ({ project }) => {
-  const { name, techStack, longDesc, thumbnail, images, siteUrl } = project;
-  const pathToThumbnail = thumbnail.fields.file.url;
-  const thumbnailWidth = thumbnail.fields.file.details.image.width;
-  const thumbnailHeight = thumbnail.fields.file.details.image.height;
+  const { name, techStack, longDesc, images, siteUrl } = project;
 
   return (
     <section className="px-6 lg:px-0 min-h-screen flex flex-col justify-center items-center">

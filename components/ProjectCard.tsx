@@ -3,7 +3,7 @@ import { AiOutlineFolder } from 'react-icons/ai';
 import { FaShare, FaGithub } from 'react-icons/fa';
 import TechStack from './TechStack';
 import Link from 'next/link';
-const OtherProject = ({
+const ProjectCard = ({
   name,
   shortDesc,
   siteUrl,
@@ -48,4 +48,4 @@ const OtherProject = ({
   );
 };
 
-export default OtherProject;
+export default ProjectCard;

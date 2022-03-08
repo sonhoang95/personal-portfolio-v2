@@ -40,7 +40,9 @@ const ProjectDetail: NextPage<{ project: ProjectData }> = ({ project }) => {
         <div className="grid lg:grid-cols-2 gap-10 text-slate">
           <div className="long-desc space-y-6">
             <ReactMarkdown>{longDesc}</ReactMarkdown>
-            <PrimaryButton url={siteUrl}>Web Demo</PrimaryButton>
+            <PrimaryButton url={siteUrl} small={true}>
+              Web Demo
+            </PrimaryButton>
           </div>
 
           <div className="space-y-6">

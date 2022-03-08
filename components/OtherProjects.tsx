@@ -7,15 +7,16 @@ const OtherProjects = ({ projects }: { projects: ProjectData[] }) => {
   const tempProjects = projects.filter(project => project.featured === false);
 
   const [showMore, setShowMore] = useState(true);
-  const [filteredProjects, setFilteredProjects] =
-    useState<ProjectData[]>(tempProjects);
+  const [filteredProjects, setFilteredProjects] = useState<ProjectData[]>(
+    tempProjects.slice(0, 3)
+  );
 
   const handleShowMore = () => {
     setShowMore(!showMore);
-    if (!showMore) {
-      setFilteredProjects(tempProjects.slice(0, 3));
-    } else {
+    if (showMore) {
       setFilteredProjects(tempProjects);
+    } else {
+      setFilteredProjects(tempProjects.slice(0, 3));
     }
   };
 

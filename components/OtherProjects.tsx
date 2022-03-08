@@ -7,20 +7,22 @@ const OtherProjects = ({ projects }: { projects: ProjectData[] }) => {
   const tempProjects = projects.filter(project => project.featured === false);
 
   const [showMore, setShowMore] = useState(true);
-  const [filteredProjects, setFilteredProjects] = useState<ProjectData[]>([]);
+  const [filteredProjects, setFilteredProjects] =
+    useState<ProjectData[]>(tempProjects);
 
-  useEffect(() => {
-    if (showMore) {
+  const handleShowMore = () => {
+    setShowMore(!showMore);
+    if (!showMore) {
       setFilteredProjects(tempProjects.slice(0, 3));
     } else {
       setFilteredProjects(tempProjects);
     }
-  }, [showMore, tempProjects]);
+  };
 
   return (
     <motion.section
       className="max-w-[1000px] mx-auto px-6 lg:px-0 mb-12 text-center"
-      initial={{ opacity: 0, y: 150 }}
+      initial={{ opacity: 0, y: 125 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
@@ -34,7 +36,7 @@ const OtherProjects = ({ projects }: { projects: ProjectData[] }) => {
         ))}
       </div>
       <button
-        onClick={() => setShowMore(!showMore)}
+        onClick={handleShowMore}
         className="mt-12 text-teal-300 border border-teal-300 inline-block rounded text-sm font-fira transition-colors duration-300 ease-in-out hover:bg-teal-800 hover:text-teal-50 px-6 py-3 capitalize"
       >
         {showMore ? 'Show more' : 'Show less'}

@@ -14,7 +14,7 @@ const About = ({ description, languages }: AboutProps) => {
     <motion.section
       id="about"
       className="pb-32 px-6 md:px-12 lg:px-0 max-w-[900px] mx-auto"
-      initial={{ opacity: 0, y: 150 }}
+      initial={{ opacity: 0, y: 125 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}

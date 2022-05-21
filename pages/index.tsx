@@ -39,10 +39,6 @@ const Home: NextPage<{ projects: ProjectData[] }> = ({ projects }) => {
           content="Second iteration of my personal portfolio"
         />
         <meta
-          property="og:description"
-          content="Second iteration of my personal portfolio"
-        />
-        <meta
           property="og:image"
           content="https://thesonnguyen.vercel.app/ogImage.png"
         />

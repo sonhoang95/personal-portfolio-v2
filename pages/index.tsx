@@ -33,6 +33,19 @@ const Home: NextPage<{ projects: ProjectData[] }> = ({ projects }) => {
           name="description"
           content="Second iteration of my personal portfolio"
         />
+        <meta property="og:title" content="Son Nguyen | Personal Portfolio" />
+        <meta
+          property="og:description"
+          content="Second iteration of my personal portfolio"
+        />
+        <meta
+          property="og:description"
+          content="Second iteration of my personal portfolio"
+        />
+        <meta
+          property="og:image"
+          content="https://thesonnguyen.vercel.app/ogImage.png"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero {...homeData} />

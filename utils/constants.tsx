@@ -63,7 +63,7 @@ export const homeData = {
       designing) exceptional digital experiences. Currently, I'm focused on
       building accessible, human-centered products at{' '}
       <a href="https://www.curo.com/" className="text-teal-300 hover:underline">
-        Curo Financial Group.
+        CURO Financial Group.
       </a>
     </Fragment>
   ),
@@ -83,19 +83,18 @@ export const aboutData = {
       </p>
       <p>
         Fast-forward to today, and I've had the privilege of working at an{' '}
-        <span className="text-teal-300">advertising agency</span> ,{' '}
         <span className="text-teal-300"> a start-up</span>, and{' '}
         <span className="text-teal-300">a corporation</span>. My main focus
         these days is building accessible, inclusive products and digital
         experiences at{' '}
         <a href="https://www.curo.com/" className="text-teal-300">
-          Curo Financial Group
+          CURO Financial Group
         </a>{' '}
         for a variety of clients.
       </p>
       <p>
-        I also recently launched a course that covers everything you need to
-        build a web app with the Spotify API using Node & React.
+        I also recently expand my horizon and sharpen my skill sets by learning
+        about code testing.
       </p>
       <p>Here are a few technologies I've been working with recently:</p>
     </Fragment>

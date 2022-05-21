@@ -4,7 +4,7 @@ import selfPortrait from '../public/images/self-portrait.jpeg';
 import SectionTitle from './SectionTitle';
 import { BiRightArrow } from 'react-icons/bi';
 import { motion } from 'framer-motion';
-import { useRef } from 'react';
+
 export interface AboutProps {
   description: JSX.Element;
   languages: string[];

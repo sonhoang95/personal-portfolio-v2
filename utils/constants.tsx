@@ -62,8 +62,8 @@ export const homeData = {
       I'm a front-end developer specializing in building (and occasionally
       designing) exceptional digital experiences. Currently, I'm focused on
       building accessible, human-centered products at{' '}
-      <a href="https://www.curo.com/" className="text-teal-300 hover:underline">
-        CURO Financial Group.
+      <a href="https://www.ccfi.com/" className="text-teal-300 hover:underline">
+        Community Choice Financial.
       </a>
     </Fragment>
   ),
@@ -87,27 +87,31 @@ export const aboutData = {
         <span className="text-teal-300">a corporation</span>. My main focus
         these days is building accessible, inclusive products and digital
         experiences at{' '}
-        <a href="https://www.curo.com/" className="text-teal-300">
-          CURO Financial Group
+        <a href="https://www.ccfi.com/" className="text-teal-300">
+          Community Choice Financial
         </a>{' '}
         for a variety of clients.
       </p>
       <p>
-        I also recently expand my horizon and sharpen my skill sets by learning
-        about code testing.
+        I'm currently learning backend development, security with the interest
+        to become a full-stack developer. On top of that, I'm also learning
+        about Test Driven Development methodology because I want my code to work
+        the way it's intended.
       </p>
       <p>Here are a few technologies I've been working with recently:</p>
     </Fragment>
   ),
   languages: [
     'JavaScript (ES6+)',
-    'React',
-    'Headless CMSs',
+    'React (Hooks, Context API)',
+    'CMSs (Contentful, Kontent)',
     'TypeScript',
     'TailwindCSS',
     'Gatsby.js',
     'Next.js',
-    'Node.js',
+    'Node.js (Express.js, MongoDB, Mongoose)',
+    'GraphQL (Apollo Server)',
+    'React Testing Library (Jest)',
   ],
 };
 

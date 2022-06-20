@@ -5,15 +5,13 @@ import Image from 'next/image';
 import TechStack from '../../components/TechStack';
 import PrimaryButton from '../../components/Buttons/PrimaryButton';
 import ReactMarkdown from 'react-markdown';
+import { useRouter } from 'next/router';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const res = await client.getEntries<any>({ content_type: 'project' });
 
-  const paths = res.items.map(item => {
-    return { params: { slug: item.fields.slug } };
-  });
-
-  return { paths, fallback: false };
+  const paths = [{ params: { slug: res.items[0].fields.slug } }];
+  return { paths, fallback: true };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
@@ -28,26 +26,36 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 const ProjectDetail: NextPage<{ project: ProjectData }> = ({ project }) => {
-  const { name, techStack, longDesc, images, siteUrl } = project;
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return (
+      <section className="px-6 lg:px-0 min-h-screen flex flex-col justify-center items-center">
+        <h1 className="text-5xl font-bold text-[#ccd6f6] mb-8">Loading...</h1>
+      </section>
+    );
+  }
 
   return (
     <section className="px-6 lg:px-0 min-h-screen flex flex-col justify-center items-center">
       <div className="container max-w-[1200px] mx-auto lg:space-y-4 my-48">
         <div className="mb-8 flex justify-between items-center">
-          <h2 className="text-5xl font-bold text-[#ccd6f6] mb-8">{name}</h2>
-          <TechStack techStack={techStack} isProjectDetails={true} />
+          <h2 className="text-5xl font-bold text-[#ccd6f6] mb-8">
+            {project.name}
+          </h2>
+          <TechStack techStack={project.techStack} isProjectDetails={true} />
         </div>
         <div className="grid lg:grid-cols-2 gap-10 text-slate">
           <div className="long-desc space-y-6">
-            <ReactMarkdown>{longDesc}</ReactMarkdown>
-            <PrimaryButton url={siteUrl} small={true}>
+            <ReactMarkdown>{project.longDesc}</ReactMarkdown>
+            <PrimaryButton url={project.siteUrl} small={true}>
               Web Demo
             </PrimaryButton>
           </div>
 
           <div className="space-y-6">
             <div className="flex flex-col gap-8">
-              {images.map((image, index) => (
+              {project.images.map((image, index) => (
                 <Image
                   key={index}
                   src={`https:${image.fields.file.url}`}

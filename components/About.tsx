@@ -23,7 +23,7 @@ const About = ({ description, languages }: AboutProps) => {
       <motion.div className="grid lg:grid-cols-[auto_300px] gap-10">
         <div className="text-[#8892b0] space-y-6">
           {description}
-          <div className="grid grid-cols-2 font-fira text-sm space-y-2 font-thin">
+          <div className="grid grid-cols-2 font-fira text-sm space-y-3 font-thin">
             {languages.map((language, index) => (
               <p key={index} className="flex items-center gap-2">
                 {' '}

@@ -90,7 +90,10 @@ const Navbar = () => {
               );
             })}
             <motion.div variants={item}>
-              <PrimaryButton url="/" small={true}>
+              <PrimaryButton
+                url="https://docs.google.com/document/d/1-g5kxN21UVUKfSO8jC7WBjGERoQnAe_XJppqXK8A1lA/edit"
+                small={true}
+              >
                 Resume
               </PrimaryButton>
             </motion.div>

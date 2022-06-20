@@ -23,11 +23,13 @@ const Contact = () => {
         is always open. Whether you have a question or just want to say hi, I'll
         try my best to get back to you!
       </p>
-      <Link href="/">
-        <a className="inline-block px-8 py-4 mt-12 rounded border border-teal-300 text-teal-300 capitalize font-fira text-sm duration-300 ease-in-out hover:bg-teal-800 hover:text-teal-50">
-          Say hello
-        </a>
-      </Link>
+
+      <a
+        href="mailto:sonhoang95@gmail.com"
+        className="inline-block px-8 py-4 mt-12 rounded border border-teal-300 text-teal-300 capitalize font-fira text-sm duration-300 ease-in-out hover:bg-teal-800 hover:text-teal-50"
+      >
+        Say hello
+      </a>
     </motion.section>
   );
 };

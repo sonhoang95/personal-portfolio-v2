@@ -1,14 +1,14 @@
-import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
-import { ProjectData } from '../../types';
-import { client } from '../index';
-import Image from 'next/image';
-import TechStack from '../../components/TechStack';
-import PrimaryButton from '../../components/Buttons/PrimaryButton';
-import ReactMarkdown from 'react-markdown';
-import { useRouter } from 'next/router';
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import { ProjectData } from "../../types";
+import { client } from "../index";
+import Image from "next/image";
+import TechStack from "../../components/TechStack";
+import PrimaryButton from "../../components/Buttons/PrimaryButton";
+import ReactMarkdown from "react-markdown";
+import { useRouter } from "next/router";
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await client.getEntries<any>({ content_type: 'project' });
+  const res = await client.getEntries<any>({ content_type: "project" });
 
   const paths = [{ params: { slug: res.items[0].fields.slug } }];
   return { paths, fallback: true };
@@ -16,12 +16,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { items } = await client.getEntries({
-    content_type: 'project',
-    'fields.slug': params?.slug,
+    content_type: "project",
+    "fields.slug": params?.slug,
   });
 
   return {
     props: { project: items[0].fields },
+    revalidate: 3600,
   };
 };
 

@@ -18,12 +18,12 @@ const TechStacks = ({
   }
 
   return (
-    <ul className="flex gap-4 items-center text-slate text-xs lg:text-sm font-thin font-fira mb-6">
+    <ul className="flex gap-4 flex-wrap items-center text-slate text-xs lg:text-sm font-thin font-fira mb-6">
       {tempTechStacks.map((item, index) => (
         <li
           key={index}
           className={`px-2 py-1 rounded bg-[#1d355d] text-[#ccd6f6] ${
-            isOtherProject ? 'text-xs bg-transparent px-0' : ''
+            isOtherProject ? "text-xs bg-transparent px-0" : ""
           }`}
         >
           {item}

@@ -53,7 +53,7 @@ export const socials = [
   },
 ];
 
-export const homeData = {
+export const heroData = {
   title: "I build things for the web.",
   name: "Son Nguyen",
   desc: (
@@ -94,27 +94,26 @@ export const aboutData = {
       </p>
       <p>
         I'm currently learning backend development, security with the interest
-        to become a full-stack developer. On top of that, I'm also learning
-        about Test Driven Development methodology because I want my code to work
-        the way it's intended.
+        to become a full-stack developer. On top of that, I'm also exploring
+        Test Driven Development with Jest and React Testing Library.
       </p>
       <p>Here are a few technologies I've been working with recently:</p>
     </Fragment>
   ),
   languages: [
     "JavaScript",
+    "TypeScript",
     "React",
     "Vue",
-    "CMSs (Contentful)",
-    "TypeScript",
-    "TailwindCSS",
     "Gatsby.js",
     "Next.js",
+    "Headless CMSs",
+    "TailwindCSS",
     "Node.js",
     "Express.js",
     "MongoDB",
     "GraphQL",
-    "Testing (Jest)",
+    "Jest",
     "Firebase (v9)",
   ],
 };

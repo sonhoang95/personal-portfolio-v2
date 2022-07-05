@@ -40,7 +40,7 @@ const ProjectDetail: NextPage<{ project: ProjectData }> = ({ project }) => {
   return (
     <section className="px-6 lg:px-0 min-h-screen flex flex-col justify-center items-center">
       <div className="container max-w-[1200px] mx-auto lg:space-y-4 my-48">
-        <div className="mb-8 flex flex-col lg:flex-row justify-between items-center">
+        <div className="mb-8 flex flex-col lg:flex-row lg:justify-between lg:items-center">
           <h2 className="text-5xl font-bold text-[#ccd6f6] mb-8">
             {project.name}
           </h2>

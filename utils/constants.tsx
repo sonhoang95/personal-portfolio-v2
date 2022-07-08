@@ -104,6 +104,7 @@ export const aboutData = {
     "JavaScript",
     "TypeScript",
     "React",
+    "Redux/@Toolkit",
     "Vue",
     "Gatsby.js",
     "Next.js",
@@ -111,10 +112,11 @@ export const aboutData = {
     "TailwindCSS",
     "Node.js",
     "Express.js",
-    "MongoDB",
     "GraphQL",
-    "Jest",
-    "Firebase (v9)",
+    "React Testing",
+    "MongoDB",
+    "SQL",
+    "PostgreSQL",
   ],
 };
 

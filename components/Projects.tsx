@@ -1,7 +1,7 @@
-import SectionTitle from './SectionTitle';
-import { ProjectData } from '../types';
-import FeaturedProject from './FeaturedProject';
-import { motion } from 'framer-motion';
+import SectionTitle from "./SectionTitle";
+import { ProjectData } from "../types";
+import FeaturedProject from "./FeaturedProject";
+import { motion } from "framer-motion";
 
 const Projects = ({ projects }: { projects: ProjectData[] }) => {
   return (
@@ -14,9 +14,9 @@ const Projects = ({ projects }: { projects: ProjectData[] }) => {
       transition={{ duration: 1 }}
     >
       <SectionTitle index={3} title="Something I've built" />
-      {projects.map(
+      {projects?.map(
         (project, index) =>
-          project.featured && <FeaturedProject key={index} {...project} />
+          project?.featured && <FeaturedProject key={index} {...project} />
       )}
     </motion.section>
   );

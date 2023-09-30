@@ -62,8 +62,11 @@ export const heroData = {
       I'm a front-end developer specializing in building (and occasionally
       designing) exceptional digital experiences. Currently, I'm focused on
       building accessible, human-centered products at{" "}
-      <a href="https://www.ccfi.com/" className="text-teal-300 hover:underline">
-        Community Choice Financial.
+      <a
+        href="https://www.trimble.com/"
+        className="text-teal-300 hover:underline"
+      >
+        Trimble Inc.
       </a>
     </Fragment>
   ),
@@ -87,8 +90,8 @@ export const aboutData = {
         <span className="text-teal-300">a corporation</span>. My main focus
         these days is building accessible, inclusive products and digital
         experiences at{" "}
-        <a href="https://www.ccfi.com/" className="text-teal-300">
-          Community Choice Financial
+        <a href="https://www.trimble.com/" className="text-teal-300">
+          Trimble Inc.
         </a>{" "}
         for a variety of clients.
       </p>
@@ -121,33 +124,32 @@ export const aboutData = {
 
 export const jobsData = [
   {
-    id: "recAGJfiU4CeaA0HR",
-    order: 4,
-    title: "Front-End Web Developer",
-    dates: "July 2022 - Present",
+    id: "recAGJfiU4CeaV0HL",
+    order: 1,
+    title: "Front-End Software Engineer",
+    dates: "September 2022 - Present",
     duties: [
-      " After an acquisition happened between my former and current employer, my team was cut down from 3 developers to only myself. By quickly recognizing and adapting to the challenges that the team was facing, I was able to work quickly, and efficiently and not let that affect our release schedule. In the end, I was awarded a spotlight recognition by my peers.",
+      "Participated in working with other developers on the team to documenting, maintaining, and updating our React component library to the most up-to-date versionings while maintaining code quality and best practices.",
+      "Adapted to the shift in technologies, learned to work with various languages, platforms, frameworks, and content management systems such as Storybook, JavaScript, TypeScript, Gatsby, React, GraphQL, Contentful and Netlify to become a valued member of the team.",
+      "ncreased team productivity by 20% by always completing tasks during the sprint schedule and make sure to review codes quickly as well as providing feedback to ensure code quality and quick turnaround time for our weekly deployment.",
+    ],
+    company: "Trimble",
+  },
+  {
+    id: "recAGJfiU4CeaA0HR",
+    order: 2,
+    title: "Front-End Web Developer",
+    dates: "January 2022 - September 2022",
+    duties: [
+      "Took initiatives and participated in working with other developers on the team to migrate from C# .NET MVC to using React with TypeScript. In the end, I was awarded a spotlight recognition by my peers.",
       "Help with interviewing, creating documents and assisting with the onboarding process to help them up and running quickly.",
-      "Utilizing Gatsby and TypeScript, I rewrote the entire website from scratch with reusable components which resulted in more maintainable and quicker, easier-to-update codebase after migrating from .NET MVC. legacy codebase.",
       "Communicating frequently with multi-disciplinary teams of developers, designers, SEO specialists, throughout the marketing department to always come up with better way to improve UI and UX.",
     ],
     company: "CCFI",
   },
   {
-    id: "recAGJfiU4CeaV0HL",
-    order: 3,
-    title: "Front-End Web Developer",
-    dates: "January 2022 - July 2022",
-    duties: [
-      "Participated in working with other developers on the team to migrate from C# .NET MVC to using React with TypeScript.",
-      "Adapted to the shift in technologies, learned to work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, GraphQL and Contentful to become a valued member on the team.",
-      "Communicated frequently with multi-disciplinary teams of designers, SEO specialists, and throughout the marketing to come up with campaign strategies as well as Sitecore performance, resulted in better user experience and 30% increased traffic across all sites.",
-    ],
-    company: "CURO",
-  },
-  {
     id: "recIL6mJNfWObonls",
-    order: 2,
+    order: 3,
     title: "Junior Front-End Developer",
     dates: "October 2021 - October 2021",
     duties: [

@@ -15,7 +15,7 @@ const Email = () => {
           className="font-fira tracking-[0.1rem] text-xs text-slate hover:text-teal-300 transform hover:-translate-y-2 transition-transform duration-200"
           style={{ writingMode: "vertical-rl" }}
         >
-          sonhoang95@gmail.com
+          son.h.nguyen1995@gmail.com
         </a>
       </Link>
       <div className="w-[1px] h-24 bg-[#8892b0]"></div>
